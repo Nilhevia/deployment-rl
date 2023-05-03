@@ -51,7 +51,7 @@ def apiReset():
 	
 	if request.method=='GET':
 		# Reset environment
-		env = gym.make("FrozenLake-v1", is_slippery=False, desc=peta)
+		env = gym.make("FrozenLake-v0", is_slippery=False, desc=peta)
 
 		env.reset()
 	
@@ -134,7 +134,7 @@ def apiSetPeta():
 			peta = peta_1
 		
 		# Reset environment
-		env = gym.make("FrozenLake-v1",is_slippery=False, desc=peta)
+		env = gym.make("FrozenLake-v0",is_slippery=False, desc=peta)
 		env.reset()
 		
 		# Konversi peta dari array atau list menjadi string
@@ -196,7 +196,7 @@ if __name__ == '__main__':
 	pilihanPeta = 1
 	
 	# Load Environment
-	env = gym.make("FrozenLake-v1",is_slippery=False, desc=peta)
+	env = gym.make("FrozenLake-v0",is_slippery=False, desc=peta)
 	env.reset()
 
 	robot_current_state = 0
